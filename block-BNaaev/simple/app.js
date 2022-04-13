@@ -10,7 +10,10 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost/simple',(err)=>{
+mongoose.connect('mongodb://localhost/simple',
+{useNewUrlParser:true,
+useUnifiedTopology:true}
+,(err)=>{
   console.log(err ? err : 'Connection true')
 })
 

@@ -11,7 +11,7 @@ var userSchema = new Schema({
 {timestamps:true});
 
 
-userSchema.pre('save',(next)=>{
+userSchema.pre('save',function(next){
     if(this.password && this.isModified('password')){
         bcrypt.hash(this.password, 10 ,(err,hashed)=>{
             if(err) return next(err);
