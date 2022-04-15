@@ -5,7 +5,7 @@ var mongoose = require('mongoose')
 var cookieParser = require('cookie-parser')
 var logger = require('morgan')
 var session = require('express-session')
-var MongoStore = require("connect-mongo")(session);
+var MongoStore = require("connect-mongo");
 
 require('dotenv').config()
 
@@ -37,7 +37,7 @@ app.use(
     secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
-    store: new MongoStore({ mongooseConnection: mongoose.connection })
+    store: new MongoStore({ mongoUrl:  'mongodb://localhost/simple' })
   }))
 
 app.use('/', indexRouter)
