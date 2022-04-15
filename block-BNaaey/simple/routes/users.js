@@ -42,7 +42,7 @@ user.verifyPassword(password,(err,result)=>{
    return res.redirect('/users/login');
   }
   req.session.userId = user.id;
-  res.redirect('/users');
+  res.redirect('/dashboard');
 })
 })
 })
