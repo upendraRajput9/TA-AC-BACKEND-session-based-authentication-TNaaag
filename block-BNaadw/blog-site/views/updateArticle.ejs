@@ -1,0 +1,13 @@
+<% include partials/header %>
+    <section class="form-section">
+    <form class="form"  action="/articles/<%=article._id%>/update" method="POST">
+        <h1>Edit Articles</h1>
+        <input type="text" value="<%=article.title%>" placeholder="Title" name="title">
+        <textarea name="description" placeholder="Description" cols="30" rows="10"><%=article.description%></textarea>
+        <input type="text" value="<%=article.author%>" placeholder="Author" name="author">
+        <input class="submit" type="submit">
+        </form>
+    </section>
+
+</body>
+</html>
