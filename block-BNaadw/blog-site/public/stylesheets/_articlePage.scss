@@ -1,0 +1,100 @@
+.article-page {
+    font-family: sans-serif;
+  
+    .article {
+      padding: 2rem 0;
+      .title {
+        text-transform: capitalize;
+        font-size: 2.8rem;
+        font-family: fantasy;
+      }
+      h3 {
+        font-size: 1.5rem;
+        font-family: fantasy;
+        color: rgb(131, 131, 131);
+      }
+      h2 {
+        font-family: fantasy;
+        font-size: 1.2rem;
+        color: rgb(131, 131, 131);
+      }
+      b {
+        color: black;
+      }
+      button {
+        background-color: inherit;
+        border: 1px solid black;
+        border-radius: 5px 0 5px 0;
+        font-family: fantasy;
+        background-color: black;
+        color: blanchedalmond;
+        &:hover {
+          background-color: rgb(160, 0, 0);
+          border: 1px solid rgb(255, 0, 0);
+          border-radius: 0 5px 0 5px;
+          color: white;
+        }
+      }
+    }
+  }
+  
+  .comment {
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 25%;
+      textarea {
+        border-radius: 0 1.5rem 0 1.5rem;
+      }
+      button {
+        border-radius: 5px 0 5px 0;
+        border: 1px solid $primary;
+        background-color: $primary;
+        color: white;
+        width: 30%;
+        margin: 1rem 0;
+        &:hover {
+          background-color: green;
+          border: 1px solid green;
+          border-radius: 0 5px 0 5px;
+          color: white;
+        }
+      }
+    }
+  }
+  
+  .comment-edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form {
+      margin-top: 7rem;
+      width: 40%;
+      padding: 2rem 3rem;
+      border: 1rem solid rgb(202, 202, 202);
+      background-color: rgb(248, 248, 248);
+      border-radius: 2rem 0 2rem 0;
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font-size: 3rem;
+      }
+      textarea{
+          font-size: 1rem;
+          font-family: sans-serif;
+          padding:1rem;
+      }
+      button{
+          padding:0.2rem 0;
+          margin-top: 1rem;
+          width: 30%;
+          border-radius: 1rem;
+          border: 3px solid rgb(202, 202, 202);
+          background-color: rgb(165, 165, 165);
+          &:hover{
+              background-color: white;
+              
+          }
+      }
+    }
+  }

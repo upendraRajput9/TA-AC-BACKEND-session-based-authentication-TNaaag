@@ -1,0 +1,17 @@
+<% include partials/header %>
+<section class="home">
+    <h2 class="gold-color">🖌All Articles </h2>
+    <ul><%articles.forEach(article=>{%>
+        <li>
+            <a href="/articles/<%=article.slug%>">
+                <h3 class="text-color">=> <%=article.title%></h3>
+            </a>
+           </li>
+        <%})%>
+
+    </ul>
+
+    </ul>
+</section>
+</body>
+</html>

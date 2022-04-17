@@ -1,0 +1,10 @@
+<% include partials/header %>
+<section class="comment-edit">
+    <form action="/comment/<%=comment._id%>" method="POST" class="comment-form">
+        <h1>Edit</h1>
+        <textarea name="content" cols="30" rows="5"><%=comment.content%></textarea>
+        <button class="comment-btn" type="submit"> edit comment</button>
+    </form>
+</section>
+</body>
+</html>
