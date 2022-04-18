@@ -1,0 +1,49 @@
+<% include partials/header %>
+<section class="container article-page">
+    <article class="article">
+    <h2 class="title gold-color"><%=article.title%></h2>
+    <h3><%=article.description%></h3>
+    <h2><b>Tags:</b>  <%=article.tags%></h2>
+    <h2><b>Author:</b> <%=article.author%></h2>
+    <h2 class="gold-color">likes: <b><%=article.likes%></b></h2>
+    <h2 class="gold-color">Dislikes: <b><%=article.dislikes%></b></h2>
+    <a href="/articles/<%=article._id%>/likes">
+    <button>Like</button>
+    </a>
+
+    <a href="/articles/<%=article._id%>/dislike">
+        <button>Dislike</button>
+        </a>
+<a href="/articles/<%=article._id%>/edit">
+<button>Edit</button>
+</a>
+<a href="/articles/<%=article._id%>/delete">
+<button>Delete</button>
+</a>
+</article>
+<article class="comment">
+<form action="/articles/<%=article._id%>/comments" method="POST" class="comment-form">
+    <textarea name="content" cols="30" rows="5"></textarea>
+    <button class="comment-btn" type="submit">comments</button>
+</form>
+
+<ul><%article.comments.forEach(comment=>{%>
+    <li>
+       
+        <h2><%=comment.content%></h2>
+   <nav class="comment-items"> 
+       <a class="text-color" href="/comment/<%=comment._id%>/like">👍 <%=comment.likes%></a>
+       <a class="text-color" href="/comment/<%=comment._id%>/dislike">👎 <%=comment.dislikes%> </a>
+       <a class="gold-color" href="/comment/<%=comment._id%>/edit">Edit</a>
+       <a class="gold-color" href="/comment/<%=comment._id%>/delete">Delete</a>
+    </nav>
+   
+    </li>
+    <%})%>
+
+</ul>
+</article>
+</section>
+
+
+<% include partials/footer %>

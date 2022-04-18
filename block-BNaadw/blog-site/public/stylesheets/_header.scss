@@ -1,0 +1,52 @@
+
+.main-head{
+    font-size: 4rem;
+}
+
+header {
+    width: 100%;
+    display: flex;
+   justify-content: space-between;
+    padding: 1rem 0;
+    font-family: 'Righteous', cursive;
+    z-index: 99;
+    background-color: rgba(206, 196, 196, 0.5);
+    
+    div{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        a{
+            font-size: 1.5rem;
+        }
+    }
+    .logo {
+      font-family: 'Audiowide', cursive;
+      font-size: 2.5rem;
+      font-weight: 900;
+  
+      color: $secondary;
+      b {
+        color: $primary;
+        &:hover {
+          color: $text-color;
+        }
+      }
+    }
+    
+      a {
+        color: $text-color;
+        padding: 0 2rem;
+        font-size: 2.3rem;
+  
+        &:hover {
+          color: $primary;
+        }
+        &:active {
+          color: goldenrod;
+        }
+      }
+    }
+    footer{
+        margin-top: 2rem;
+    }

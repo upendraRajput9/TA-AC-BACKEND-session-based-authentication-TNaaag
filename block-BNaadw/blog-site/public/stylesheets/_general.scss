@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+.text-color{
+    background-image: linear-gradient(to right, rgb(196,18,48), rgb(0, 0, 0) );
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.width-100{
+   height: 100vh;
+}
+.gold-color{
+    background-image: linear-gradient(to right, rgb(0, 0, 0), gold );
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.container{
+    max-width: 1350px;
+    padding: 0 32px;
+    margin: 0 auto;
+}
+// Flex
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.display-flex{
+    display: flex;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comment-items{
+    a{
+        padding: 10px;
+    }
+}
+// Text
+.text-center{
+    text-align: center;
+}
+body{
+    font-family: 'Audiowide', cursive;
+    line-height: 1.6;
+}
+.btn{
+    padding: .8rem 1.5rem;
+    font-size: 1.3rem;
+    font-family: 'Righteous', cursive;
+    background-color: $primary;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    &:hover{
+        color: $primary;
+        background-color: black;
+        box-shadow: 1px 1px 3px 1px  white;
+    }
+}

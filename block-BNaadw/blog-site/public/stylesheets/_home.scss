@@ -1,0 +1,42 @@
+.form-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    form{
+        border: 2px solid black;
+        padding: 3rem;
+        display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: 3rem 0;
+  h2{
+      font-size: 1.5rem;
+  }
+  input{
+    margin: 1rem 0;
+    padding: 0.7rem;
+  }
+    }
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 0;
+    height: 50vh;
+    button{
+        font-size: 3rem;
+    border: 2px solid rgb(240, 240, 240);
+    width: 30%;
+    margin: 2rem 0;
+    }
+    h2{
+        font-size: 3rem;
+    }
+    h3{
+        font-size: 2.5rem;
+    }
+}
+

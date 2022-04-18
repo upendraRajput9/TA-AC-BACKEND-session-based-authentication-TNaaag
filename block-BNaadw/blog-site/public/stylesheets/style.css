@@ -1,0 +1,418 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  background-color: #f3f3f3;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.text-color {
+  background-image: -webkit-gradient(linear, left top, right top, from(#c41230), to(black));
+  background-image: linear-gradient(to right, #c41230, black);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.width-100 {
+  height: 100vh;
+}
+
+.gold-color {
+  background-image: -webkit-gradient(linear, left top, right top, from(black), to(gold));
+  background-image: linear-gradient(to right, black, gold);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container {
+  max-width: 1350px;
+  padding: 0 32px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.display-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comment-items a {
+  padding: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+body {
+  font-family: 'Audiowide', cursive;
+  line-height: 1.6;
+}
+
+.btn {
+  padding: .8rem 1.5rem;
+  font-size: 1.3rem;
+  font-family: 'Righteous', cursive;
+  background-color: #c41230;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #c41230;
+  background-color: black;
+  -webkit-box-shadow: 1px 1px 3px 1px  white;
+          box-shadow: 1px 1px 3px 1px  white;
+}
+
+.main-head {
+  font-size: 4rem;
+}
+
+header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 0;
+  font-family: 'Righteous', cursive;
+  z-index: 99;
+  background-color: rgba(206, 196, 196, 0.5);
+}
+
+header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+header div a {
+  font-size: 1.5rem;
+}
+
+header .logo {
+  font-family: 'Audiowide', cursive;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #252525;
+}
+
+header .logo b {
+  color: #c41230;
+}
+
+header .logo b:hover {
+  color: #212121;
+}
+
+header a {
+  color: #212121;
+  padding: 0 2rem;
+  font-size: 2.3rem;
+}
+
+header a:hover {
+  color: #c41230;
+}
+
+header a:active {
+  color: goldenrod;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+.form-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-section form {
+  border: 2px solid black;
+  padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 70%;
+  margin: 3rem 0;
+}
+
+.form-section form h2 {
+  font-size: 1.5rem;
+}
+
+.form-section form input {
+  margin: 1rem 0;
+  padding: 0.7rem;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem 0;
+  height: 50vh;
+}
+
+.home button {
+  font-size: 3rem;
+  border: 2px solid #f0f0f0;
+  width: 30%;
+  margin: 2rem 0;
+}
+
+.home h2 {
+  font-size: 3rem;
+}
+
+.home h3 {
+  font-size: 2.5rem;
+}
+
+.article-page {
+  font-family: sans-serif;
+}
+
+.article-page .article {
+  padding: 2rem 0;
+}
+
+.article-page .article .title {
+  text-transform: capitalize;
+  font-size: 2.8rem;
+  font-family: fantasy;
+}
+
+.article-page .article h3 {
+  font-size: 1.5rem;
+  font-family: fantasy;
+  color: #838383;
+}
+
+.article-page .article h2 {
+  font-family: fantasy;
+  font-size: 1.2rem;
+  color: #838383;
+}
+
+.article-page .article b {
+  color: black;
+}
+
+.article-page .article button {
+  background-color: inherit;
+  border: 1px solid black;
+  border-radius: 5px 0 5px 0;
+  font-family: fantasy;
+  background-color: black;
+  color: blanchedalmond;
+}
+
+.article-page .article button:hover {
+  background-color: #a00000;
+  border: 1px solid red;
+  border-radius: 0 5px 0 5px;
+  color: white;
+}
+
+.comment form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 25%;
+}
+
+.comment form textarea {
+  border-radius: 0 1.5rem 0 1.5rem;
+}
+
+.comment form button {
+  border-radius: 5px 0 5px 0;
+  border: 1px solid #c41230;
+  background-color: #c41230;
+  color: white;
+  width: 30%;
+  margin: 1rem 0;
+}
+
+.comment form button:hover {
+  background-color: green;
+  border: 1px solid green;
+  border-radius: 0 5px 0 5px;
+  color: white;
+}
+
+.comment-edit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.comment-edit form {
+  margin-top: 7rem;
+  width: 40%;
+  padding: 2rem 3rem;
+  border: 1rem solid #cacaca;
+  background-color: #f8f8f8;
+  border-radius: 2rem 0 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.comment-edit form h1 {
+  font-size: 3rem;
+}
+
+.comment-edit form textarea {
+  font-size: 1rem;
+  font-family: sans-serif;
+  padding: 1rem;
+}
+
+.comment-edit form button {
+  padding: 0.2rem 0;
+  margin-top: 1rem;
+  width: 30%;
+  border-radius: 1rem;
+  border: 3px solid #cacaca;
+  background-color: #a5a5a5;
+}
+
+.comment-edit form button:hover {
+  background-color: white;
+}
+
+#main-head {
+  font-size: 4rem;
+}
+/*# sourceMappingURL=style.css.map */
