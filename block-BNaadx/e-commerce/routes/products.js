@@ -18,28 +18,36 @@ var storage = multer.diskStorage({
   
   var upload =multer({storage:storage})
 //product page
+router.get('/new/:id',(req,res)=>{
+    let id = req.params.id
+    res.render('productForm.ejs',{id:id})
+})
+
 router.get('/:id/',(req,res,next)=>{
     let userId = req.params.id
+    Admin.findById(userId,(err,admin)=>{
+        console.log(err,admin)
+        if(err) return next(err)
     Product.find({},(err,products)=>{
         if(err) return next(err);
-        res.render('products',{list:products,userId:userId})
+        res.render('products',{list:products,userId:userId,admin:admin})
     })
+})
 })
 
 //get product added form
-router.get('/new',(req,res)=>{
-    res.render('productForm')
-})
+router.post('/:id',upload.single('image'),(req,res,next)=>{
+    var id = req.params.id;
+    req.body.image=req.file.filename
+        Product.create(req.body,(err,product)=>{
+            if(err) return next(err);
+            console.log(product);
+            res.redirect('/products/'+id)
+        })
+    });
 
 //create product
-router.post('/',upload.single('image'),(req,res,next)=>{
-req.body.image=req.file.filename
-    Product.create(req.body,(err,product)=>{
-        if(err) return next(err);
-        console.log(product);
-        res.redirect('/products/')
-    })
-});
+
 //detail page
 router.get('/:id/:userId',(req,res,next)=>{
     var id = req.params.id;

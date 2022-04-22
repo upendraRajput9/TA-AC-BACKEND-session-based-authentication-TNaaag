@@ -5,7 +5,7 @@ var userSchema = new Schema({
     name:String,
     email:{type:String,required:true,unique:true},
     password:{type:String,required:true},
-    cart:[{type: Schema.Types.ObjectId , ref:"Product" ,unique:true}]
+    cart:[{type: Schema.Types.ObjectId , ref:"Product"}]
 })
 
 userSchema.pre('save',function(next){
