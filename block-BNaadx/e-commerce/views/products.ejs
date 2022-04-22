@@ -12,6 +12,12 @@
         <a href="/users/<%=userId%>">
             <button>Cart</button>
         </a>
+        <%if(admin!==null){%>
+            <a href="/products/new/<%=userId%>">
+                <button>Add products</button>
+            </a>
+       <% }%>
+        
     </header>
 
     <section>

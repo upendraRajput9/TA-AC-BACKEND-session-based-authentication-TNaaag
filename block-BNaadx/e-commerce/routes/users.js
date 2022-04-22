@@ -69,14 +69,20 @@ router.post('/login', (req, res, next) => {
   if (!email || !password) {
     return res.redirect('/users/login')
   }
-  User.findOne({ email }, (err, user) => {
+  User.findOne({ email}, (err, user) => {
     if (err) return next(err)
     if (!user) {
       return res.redirect('/users/login')
-    } else {
-      req.session.userId = user.id
-      res.redirect('/products/' + user.id)
-    }
+    } 
+    user.verifyPassword(password, (err, result) => {
+      if (err) return next(err)
+      if (!result) {
+        return res.redirect('/users/login')
+      }else{
+        req.session.userId = user.id;
+        res.redirect('/products/' + user.id)
+      }
+    })
   })
 })
 
